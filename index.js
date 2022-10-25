@@ -7,6 +7,7 @@ const typeDefs = gql`
         nome: String
         ativo: Boolean
         id: ID
+        tecnologias: [String!]!
         
     }
 `;
@@ -27,6 +28,9 @@ const resolvers = {
         },
         id(){
             return 12345678;
+        },
+        tecnologias(){
+            return ['CSS', 'JavaScript', 'SQL'];
         }
     }
 };
